@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Greeting from './Greeting'
 
-export default function App() {
+export default function App(props) {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Hello World!</Text>
+      <Greeting name='Rexxar' />
+      <Greeting name='Jaina' />
       <StatusBar style="auto" />
     </View>
   );
