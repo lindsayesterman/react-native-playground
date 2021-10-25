@@ -1,15 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Greeting from './Greeting'
+import { StatusBar } from "expo-status-bar";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
+import FormPage from "./FormPage";
 
 export default function App(props) {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <View style={styles.container}>
-      <Text>Hello World!</Text>
-      <Greeting name='Rexxar' />
-      <Greeting name='Jaina' />
-      <StatusBar style="auto" />
+      {showForm ? null : (
+        <Button
+          onPress={() => setShowForm(true)}
+          title="Fill out questionnare"
+        ></Button>
+      )}
+      {showForm ? <FormPage></FormPage> : null}
     </View>
   );
 }
@@ -17,8 +22,8 @@ export default function App(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
