@@ -1,11 +1,11 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from "react";
+import { Text, View, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   center: {
-    alignItems: 'center'
-  }
-})
+    alignItems: "center",
+  },
+});
 
 const Greeting = (props) => {
   return (
@@ -13,6 +13,6 @@ const Greeting = (props) => {
       <Text>Hello {props.name}!</Text>
     </View>
   );
-}
+};
 
 export default Greeting;
