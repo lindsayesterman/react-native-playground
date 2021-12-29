@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet} from "react-native";
+import { Text, StyleSheet} from "react-native";
 
 export default function Question(props) {
   return (
@@ -10,7 +10,9 @@ export default function Question(props) {
 
 const styles = StyleSheet.create({
   question: {
-    margin:10,
+    marginVertical:20,
+    fontSize: 17,
+    fontWeight: "bold"
   },
 });
 
